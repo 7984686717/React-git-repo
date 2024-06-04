@@ -1,11 +1,13 @@
 
 import './App.css';
 import img1 from './Image/01.jpg';
+let name="Parth";
 
 function App() {
   return (
     <>
     <header>
+      <h1>{name}</h1>
       <nav>
         <ul>
           <li>Home</li>

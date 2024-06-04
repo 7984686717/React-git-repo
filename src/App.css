@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .lorem-p{
   color: blueviolet;
   background-color: black;
@@ -19,4 +24,7 @@ nav ul{
   justify-content: space-between;
   margin: 0 auto;
   list-style-type: none;
+}
+h1{
+  text-align: center;
 }

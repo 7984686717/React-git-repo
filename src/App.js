@@ -1,27 +1,34 @@
 
+import { useState } from 'react';
 import './App.css';
-import img1 from './Image/01.jpg';
-let name="Parth";
+import Navbar from './Compornetns/Navbar';
+import TextBar from './Compornetns/TextBar';
 
 function App() {
+
+  const [mode, setmode] = useState('light');
+
+  const [btntext, setbtntext] = useState('Enable Dark Mode')
+
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setmode('light');
+      document.body.style.background="black";
+      document.body.style.color="white";
+
+      setbtntext('Enable Light Mode')
+    } else {
+      setmode('dark');
+      document.body.style.background="white";
+      document.body.style.color="black";
+
+      setbtntext("Enable Dark mode")
+    }
+  }
   return (
     <>
-    <header>
-      <h1>{name}</h1>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Context Us</li>
-        </ul>
-      </nav>
-
-      <p className="lorem-p">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique doloribus corrupti laborum voluptate qui iure libero et, voluptatibus eligendi tempore culpa illo consequatur repudiandae magnam reprehenderit voluptas dignissimos neque.
-      </p>
-
-      <img src={img1} alt="img1" width="100%"/>
-    </header>
+    <Navbar heading='SIT' about='About Ud' mode={mode} btntext={btntext} toggleMode={toggleMode}/>
+    <TextBar title="Inter Your Text" mode={mode} toggleMode={toggleMode}></TextBar>
     </>
   );
 }

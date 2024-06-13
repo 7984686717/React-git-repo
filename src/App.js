@@ -12,17 +12,17 @@ function App() {
 
   const toggleMode = () => {
     if (mode === 'light') {
-      setmode('light');
+      setmode('dark');
       document.body.style.background="black";
       document.body.style.color="white";
 
-      setbtntext('Enable Light Mode')
+      setbtntext('Enable Light Mode');
     } else {
-      setmode('dark');
+      setmode('light');
       document.body.style.background="white";
       document.body.style.color="black";
 
-      setbtntext("Enable Dark mode")
+      setbtntext("Enable Dark mode");
     }
   }
   return (

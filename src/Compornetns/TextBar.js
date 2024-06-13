@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 
-export default function TextForm(props) {
+export default function TextBar(props) {
     var [text, setText] = useState("Enter your text");
 
     const handleonchange = (event) => {
@@ -46,7 +46,7 @@ export default function TextForm(props) {
         <div>
             <div className="mb-3 mx-5 my-5">
                 <h1>{props.title}</h1>
-                <textarea className={`form-control bg-${props.mode} text-${props.mode}`} id="exampleFormControlTextarea1" rows="3" value={text} onChange={handleonchange}></textarea>
+                <textarea className={`form-control bg-${props.mode === 'light' ? 'light' : 'dark'} text-${props.mode === 'light' ? 'dark' : 'light'}`}  id="exampleFormControlTextarea1" rows="3" value={text} onChange={handleonchange}></textarea>
                 <button className='btn btn-outline-success my-3' onClick={Upchange}>Upper button</button>
                 &nbsp;&nbsp;
                 <button className='btn btn-outline-success my-3' onClick={lowerchangee}>Lower Button</button>

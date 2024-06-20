@@ -34,6 +34,13 @@ function App() {
       document.body.style.color= 'white';
       newbtnText('Enable to Dark Mode');
       showAlert("Dark Mode Has Been Enable", "sucess")
+
+      setTimeout(() => {
+        document.title= "SIT - Admission";
+      }, 1000);
+      setTimeout(() => {
+        document.title= "SIT - B.sc.IT"
+      }, 500);
     } else {
       setMode('light')
       document.body.style.background = 'white';
